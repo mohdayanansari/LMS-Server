@@ -54,7 +54,7 @@ app.all('*', (req: Request, res: Response) => {
   } else if (req.accepts('json')) {
     res.json({
       success: false,
-      message: '404 Not Found!',
+      message: '404 Not Found! ss',
     })
   } else {
     res.type('txt').send('404 Not Found!')
