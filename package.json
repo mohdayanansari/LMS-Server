@@ -16,6 +16,7 @@
     "pnpm": "please-use-npm",
     "npm": ">=9.5.1"
   },
+  "type": "module",
   "scripts": {
     "build:compile": "npx babel --extensions .ts --out-dir dist --source-maps",
     "build:types": "tsc",
