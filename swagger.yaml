@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  title: SERVER API Doc
+  description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
+  version: 1.0.0
+  contact:
+    email: mohdayanansari199@gmail.com
+    url: www.abc.com
+servers:
+  - url: '{protocol}://localhost:4000/api/{version}'
+    description: Main (production) server
+    variables:
+      version:
+        enum:
+          - v1
+          - v2
+        default: v1
+      protocol:
+        enum:
+          - http
+          - https
+        default: http
+
+  - url: http://staging-api.example.com
+    description: Optional server description, e.g. Internal staging server for testing
+
+components:
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: token
+    BearerAuth:
+      type: http
+      scheme: bearer
